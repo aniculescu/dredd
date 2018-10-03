@@ -1,8 +1,8 @@
 const winston = require('winston');
 
-module.exports = new (winston.Logger)({
+module.exports = winston.createLogger({
   transports: [
-    new (winston.transports.Console)({ colorize: true })
+    new winston.transports.Console({ colorize: true })
   ],
   levels: {
     silly: 14,
